@@ -5,6 +5,11 @@ const inputImageCanvasList = document.querySelector('.input-image-canvas-list');
 const outputImageCanvasList = document.querySelector('.output-image-canvas-list');
 const downloadButton = document.querySelector('#download-button');
 
+// Remove loading screen
+window.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('preloader').style.display = 'none';
+});
+
 function clearAllContents() {
     imageGallery.innerHTML = '';
     inputImageCanvasList.innerHTML = '';

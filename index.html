@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/loader.min.css">
     <style>
         .uploaded-image {
             max-width: 100%;
@@ -28,8 +29,18 @@
 
 <body>
 
+    <div class="pre-wrap" id="preloader">
+        <div class="wrap">
+            <div class="loading">
+                <div class="bounceball"></div>
+                <div class="text">NOW LOADING</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Container -->
-    <div class="container-fluid px-0 py-4 mb-3 bg-dark border-bottom border-success text-center">
+    <div class="container-fluid px-0 py-4 mb-3 border-bottom border-success text-center"
+        style="background-color: #181818;">
         <h1 class="display-3 text-success">
             Border.io
         </h1>
@@ -63,14 +74,15 @@
     <div class="input-image-canvas-list">
 
     </div>
-    <script src="./js/openCV/opencv.min.js"></script>
+
+    <script src="https://docs.opencv.org/master/opencv.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"
         integrity="sha512-uVSVjE7zYsGz4ag0HEzfugJ78oHCI1KhdkivjQro8ABL/PRiEO4ROwvrolYAcZnky0Fl/baWKYilQfWvESliRA=="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
         integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-        crossorigin="anonymous"></script>
-    <script src="./js/index.js"></script>
+        crossorigin="anonymous" defer></script>
+    <script src="./js/index.min.js" defer></script>
 </body>
 
 </html>
