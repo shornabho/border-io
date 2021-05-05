@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border.io - Add Border to Images in Bulk</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .uploaded-image {
+            max-width: 100%;
+            max-height: 70vh;
+            margin: 0 auto;
+            object-fit: contain;
+            border: 1px solid black;
+            background-color: #181818;
+        }
+
+        .input-image-canvas-list,
+        .output-image-canvas-list {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Container -->
+    <div class="container-fluid px-0 py-5 mb-5 bg-dark border-bottom border-success text-center">
+        <h1 class="display-4 text-success">
+            Border.io
+        </h1>
+    </div>
+    <div class="container d-flex">
+        <div class="input-group mb-3">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="filesInput" multiple accept="image/*">
+                <label class="custom-file-label" for="filesInput">Choose files...</label>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex">
+        <button class="btn btn-sm btn-success ml-auto" id="download-button" disabled><i class="fa fa-download"></i>
+            Download</button>
+    </div>
+
+    <div class="output-image-canvas-list">
+
+    </div>
+
+    <div class="container">
+        <div class="image-gallery row">
+
+        </div>
+    </div>
+
+    <div class="input-image-canvas-list">
+
+    </div>
+    <script src="./js/openCV/opencv.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"
+        integrity="sha512-uVSVjE7zYsGz4ag0HEzfugJ78oHCI1KhdkivjQro8ABL/PRiEO4ROwvrolYAcZnky0Fl/baWKYilQfWvESliRA=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
